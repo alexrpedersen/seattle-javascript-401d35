@@ -12,14 +12,15 @@ Explore more advanced Javascript development patterns using ES6 Classes, Inherit
   - Pure functions, Higher Order Functions, Immutable State
 - Javascript Prototypal Inheritance
 - Class Based Inheritance
-- How Javascript throws errors
 
 #### Execute
 
 - Converting Javascript Classes between Constructor/Prototypes and ES6 Class syntax
 - Create a Class using ES6 Class Syntax
-- Produce/Throw a custom Javascript error
 
 ## Today's Outline
-
-<!-- To Be Completed By Instructor -->
+- Code Review (notes app v1)
+- Constructors, Classes, and FP
+- Validation
+- HTTP App V2
+- Lab Prep
