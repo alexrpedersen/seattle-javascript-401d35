@@ -2,7 +2,7 @@
 
 const superagent = require('superagent');
 
-const History = require('./history');
+const history = require('./model/history-model.js');
 
 class HTTP {
 
@@ -14,7 +14,7 @@ class HTTP {
     if (opts) {
       return superagent(opts.method, opts.url)
         .send(opts.body)
-        .then(this.render)
+        .then(data => this.render(data))
         .then(() => this.save(opts))
     }
   }
@@ -24,9 +24,12 @@ class HTTP {
   }
 
   async save(opts) {
-    let record = new History(opts);
-    let saved = await record.save();
-    return saved;
+    // let record = new History(opts);
+    // let saved = await record.save();
+    // return saved;
+
+    let record = await(history.create(opts));
+    return record;
   }
 
 }

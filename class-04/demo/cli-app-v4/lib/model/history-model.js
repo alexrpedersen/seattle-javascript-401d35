@@ -1,22 +1,19 @@
 'use strict';
 
-const schema = require('./food-schema.js');
+const schema = require('./history-schema.js');
 
-class Food {
-
-  constructor() {
-  }
-
+class History {
+  constructor() {};
   get(_id) {
-    if (_id) {
-      return schema.findOne({ _id });
-    }
-    else {
+    if(_id) {
+      return schema.findOne({ _id })
+    } else {
       return schema.find({});
     }
   }
 
   create(record) {
+    // { method: 'GET', url: 'http://localhost:3000', body: undefined, headers: undefined }
     let newRecord = new schema(record);
     return newRecord.save();
   }
@@ -28,7 +25,6 @@ class Food {
   delete(_id) {
     return schema.findByIdAndDelete(_id);
   }
-
 }
 
-module.exports = Food;
+module.exports = new History();

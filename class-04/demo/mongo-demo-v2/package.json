@@ -1,0 +1,20 @@
+{
+  "name": "mongo-demo-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.9"
+  },
+  "devDependencies": {
+    "@code-fellows/supergoose": "^1.0.2",
+    "jest": "^25.3.0"
+  }
+}
