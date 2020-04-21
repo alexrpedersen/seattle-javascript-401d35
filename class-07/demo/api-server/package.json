@@ -1,21 +1,20 @@
 {
-  "name": "api-client",
+  "name": "api-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint **/*.js",
-    "test": "jest --coverage",
-    "test-watch": "jest --watchAll --coverage"
+    "test": "jest --verbose --coverage",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^6.8.0",
-    "express": "^4.17.1",
-    "jest": "^24.9.0",
-    "method-override": "^3.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0",
     "supertest": "^4.0.2"
   }
 }
