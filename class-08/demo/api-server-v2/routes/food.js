@@ -1,15 +1,11 @@
 'use strict';
 
 const express = require('express');
-
-// Get an instance of a model (food, in this case)
 const food = require('../models/food/food-model.js');
+const foodRouter = express.Router();
 
-const router = express.Router();
-
-// Define our routes
-router.get('/food', getFood);
-router.post('/food', postFood);
+foodRouter.get('/food', getFood);
+foodRouter.post('/food', postFood);
 
 function getFood(req, res, next) {
   food.get()
@@ -22,9 +18,9 @@ function getFood(req, res, next) {
 function postFood(req, res, next) {
   food.create(req.body)
     .then(data => {
-      res.status(200).json(data);
+      res.status(201).json(data);
     })
     .catch(next);
 }
 
-module.exports = router;
+module.exports = foodRouter;
