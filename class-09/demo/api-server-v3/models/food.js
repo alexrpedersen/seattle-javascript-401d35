@@ -1,9 +1,8 @@
 'use strict';
 
 const schema = require('./food-schema.js');
-const dataModel = require('./model.js');
+const model = require('./model');
 
-class Food extends dataModel { }
-
+class Food extends model { };
 
 module.exports = new Food(schema);
