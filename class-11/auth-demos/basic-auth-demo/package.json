@@ -1,8 +1,8 @@
 {
-  "name": "encoding",
+  "name": "basic-auth-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "basic-auth-middleware.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "base-64": "^0.1.0",
-    "bcrypt": "^3.0.7"
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
   }
 }
