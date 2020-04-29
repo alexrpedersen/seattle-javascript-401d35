@@ -6,8 +6,8 @@ const users = require('./users.js');
 // these are the required creds (some private - some public) for login/signup with a 3rd party service - OAuth
 const tokenServerUrl = 'https://github.com/login/oauth/access_token';
 const remoteAPI = 'https://api.github.com/user';
-const CLIENT_ID = 'e418bad691afdf881466'
-const CLIENT_SECRET = '7ab6e74511c3d6e7ab2ba4b076c8b5c99474ffc3';
+const CLIENT_ID = ''; // process.env.CLIENT_ID goes here - this lives in the associated .env file
+const CLIENT_SECRET = ''; // process.env.CLIENT_SECRET goes here - this lives in the associated .env file
 const API_SERVER = 'http://localhost:3000/oauth';
 
 module.exports = async function authorize(req, res, next) {
